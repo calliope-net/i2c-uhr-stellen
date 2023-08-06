@@ -1,7 +1,10 @@
 {
     "name": "i2c-uhr-stellen",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "rtc-pcf85063tp": "github:calliope-net/rtc-pcf85063tp#v1.0.0",
+        "lcd-16x2rgb": "github:calliope-net/lcd-16x2rgb#v1.0.0",
+        "bit": "github:calliope-net/bit#v1.0.0"
     },
     "files": [
         "main.blocks",
@@ -19,5 +22,5 @@
         "calliopemini",
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }

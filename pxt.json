@@ -1,5 +1,6 @@
 {
     "name": "i2c-uhr-stellen",
+    "version": "1.0.0",
     "dependencies": {
         "core": "*",
         "rtc-pcf85063tp": "github:calliope-net/rtc-pcf85063tp#v1.0.1",

@@ -1,21 +1,3 @@
-input.onButtonEvent(Button.AB, input.buttonEventValue(ButtonEvent.LongClick), function () {
-    if (iStatus == 1) {
-        rtcpcf85063tp.initRegister(rtcpcf85063tp.eADDR.RTC_PCF85063TP)
-        lcd16x2rgb.screenClear(lcd16x2rgb.eADDR_LCD.LCD_16x2)
-        lcd16x2rgb.setDisplay(lcd16x2rgb.eADDR_LCD.LCD_16x2, lcd16x2rgb.eONOFF.ON, lcd16x2rgb.eONOFF.ON, lcd16x2rgb.eONOFF.ON)
-        basic.setLedColor(0x0000ff)
-        iStatus = 2
-        zeigeZeit()
-        zeigeZeitRegister()
-    } else if (iStatus == 2) {
-        lcd16x2rgb.screenClear(lcd16x2rgb.eADDR_LCD.LCD_16x2)
-        lcd16x2rgb.setDisplay(lcd16x2rgb.eADDR_LCD.LCD_16x2, lcd16x2rgb.eONOFF.ON, lcd16x2rgb.eONOFF.ON, lcd16x2rgb.eONOFF.ON)
-        basic.setLedColor(0xffff00)
-        iStatus = 3
-        iOffset = bit.sign(rtcpcf85063tp.readRegister(rtcpcf85063tp.eADDR.RTC_PCF85063TP, rtcpcf85063tp.eControl.Offset), 6)
-        zeigeControlRegister()
-    }
-})
 function zeigeZeitRegister () {
     lcd16x2rgb.writeText(lcd16x2rgb.eADDR_LCD.LCD_16x2, 1, 1, 1, lcd16x2rgb.eAlign.left, bit.formatNumber(iReg, bit.eLength.HEX_F))
     if (bit.between(iReg, 0, 6)) {
@@ -26,7 +8,7 @@ function zeigeZeitRegister () {
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     if (iStatus == 2) {
         rtcpcf85063tp.addDateTime(rtcpcf85063tp.eADDR.RTC_PCF85063TP, iReg, -1)
-rtcpcf85063tp.readDateTime(rtcpcf85063tp.eADDR.RTC_PCF85063TP)
+        rtcpcf85063tp.readDateTime(rtcpcf85063tp.eADDR.RTC_PCF85063TP)
         zeigeZeit()
         zeigeZeitRegister()
     } else if (iStatus == 3) {
@@ -72,7 +54,7 @@ input.onButtonEvent(Button.AB, input.buttonEventClick(), function () {
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (iStatus == 2) {
         rtcpcf85063tp.addDateTime(rtcpcf85063tp.eADDR.RTC_PCF85063TP, iReg, 1)
-rtcpcf85063tp.readDateTime(rtcpcf85063tp.eADDR.RTC_PCF85063TP)
+        rtcpcf85063tp.readDateTime(rtcpcf85063tp.eADDR.RTC_PCF85063TP)
         zeigeZeit()
         zeigeZeitRegister()
     } else if (iStatus == 3) {
@@ -112,15 +94,37 @@ function initRGB () {
     }
 }
 input.onButtonEvent(Button.A, input.buttonEventValue(ButtonEvent.Hold), function () {
-    if (iStatus == 2 && iReg > 0) {
-        iReg += -1
-        zeigeZeitRegister()
+    if (!(input.buttonIsPressed(Button.B))) {
+        if (iStatus == 2 && iReg > 0) {
+            iReg += -1
+            zeigeZeitRegister()
+        }
     }
 })
 input.onButtonEvent(Button.B, input.buttonEventValue(ButtonEvent.Hold), function () {
-    if (iStatus == 2 && iReg < 6) {
-        iReg += 1
+    if (!(input.buttonIsPressed(Button.A))) {
+        if (iStatus == 2 && iReg < 6) {
+            iReg += 1
+            zeigeZeitRegister()
+        }
+    }
+})
+input.onButtonEvent(Button.AB, input.buttonEventValue(ButtonEvent.Hold), function () {
+    if (iStatus == 1) {
+        rtcpcf85063tp.initRegister(rtcpcf85063tp.eADDR.RTC_PCF85063TP)
+        lcd16x2rgb.screenClear(lcd16x2rgb.eADDR_LCD.LCD_16x2)
+        lcd16x2rgb.setDisplay(lcd16x2rgb.eADDR_LCD.LCD_16x2, lcd16x2rgb.eONOFF.ON, lcd16x2rgb.eONOFF.ON, lcd16x2rgb.eONOFF.ON)
+        basic.setLedColor(0x0000ff)
+        iStatus = 2
+        zeigeZeit()
         zeigeZeitRegister()
+    } else if (iStatus == 2) {
+        lcd16x2rgb.screenClear(lcd16x2rgb.eADDR_LCD.LCD_16x2)
+        lcd16x2rgb.setDisplay(lcd16x2rgb.eADDR_LCD.LCD_16x2, lcd16x2rgb.eONOFF.ON, lcd16x2rgb.eONOFF.ON, lcd16x2rgb.eONOFF.ON)
+        basic.setLedColor(0xffff00)
+        iStatus = 3
+        iOffset = bit.sign(rtcpcf85063tp.readRegister(rtcpcf85063tp.eADDR.RTC_PCF85063TP, rtcpcf85063tp.eControl.Offset), 6)
+        zeigeControlRegister()
     }
 })
 let iOffset = 0

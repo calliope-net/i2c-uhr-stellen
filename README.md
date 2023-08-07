@@ -9,6 +9,7 @@
 ![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/main.jpg)
 ![](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/img/Grove-High_Precision_RTC.jpg)
 -->
+
 ### Dieses Projekt importieren, mit Calliope testen, bearbeiten.
 
 Um dieses Repository in MakeCode zu importieren.
@@ -27,7 +28,7 @@ Um dieses Repository in MakeCode zu importieren.
   * *1 Anzeige Datum und Zeit* (RGB LED aus)
   * *2 Uhr stellen* (RGB LED blau)
   * *3 Register anzeigen und Offset stellen* (RGB LED gelb)
-* die Umschaltung erfolgt mit **A+B halten**, zurück zu 1 geht es immer mit **A+B geklickt**
+* die Umschaltung 1→2 2→3 erfolgt mit **A+B halten**, zurück zu →1 mit **A+B geklickt**
 * im Status *1 Anzeige Datum und Zeit*
   * **A geklickt** zeigt auf der 25 LED Matrix binär das Datum an (Variable i25LED = 1)
   * **B geklickt** zeigt auf der 25 LED Matrix binär die Zeit an (Variable i25LED = 2)

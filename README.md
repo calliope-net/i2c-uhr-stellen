@@ -24,17 +24,17 @@ Um dieses Repository in MakeCode zu importieren.
 > Nur wenn ein LCD Modul mit RGB Hintergrundbeleuchtung angeschlossen ist, wird diese mit **A+B geklickt** an geschaltet.
 
 * das Programm hat 3 Zustände (Variable iStatus):
-  * 1 Anzeige Datum und Zeit (RGB LED aus)
-  * 2 Uhr stellen (RGB LED blau)
-  * 3 Register anzeigen und Offset stellen (RGB LED gelb)
+  * *1 Anzeige Datum und Zeit* (RGB LED aus)
+  * *2 Uhr stellen* (RGB LED blau)
+  * *3 Register anzeigen und Offset stellen* (RGB LED gelb)
 * die Umschaltung erfolgt mit **A+B halten**, zurück zu 1 geht es immer mit **A+B geklickt**
-* im Status 1 Anzeige Datum und Zeit
-  * **A geklickt** zeigt auf der 25 LED Matrix binär das Datum an
-  * **B geklickt** zeigt auf der 25 LED Matrix binär die Zeit an
+* im Status *1 Anzeige Datum und Zeit*
+  * **A geklickt** zeigt auf der 25 LED Matrix binär das Datum an (Variable i25LED = 1)
+  * **B geklickt** zeigt auf der 25 LED Matrix binär die Zeit an (Variable i25LED = 2)
   * **A+B geklickt** RGB Hintergrundbeleuchtung grün, rot bei Fehler OscillatorStop
-    * auch die RGB LED wird grün oder rot, der Fehler wird gelöscht, wenn die Sekunde neu gestellt wird
+    * der Fehler wird gelöscht, wenn die Sekunde neu gestellt wird
   * **A+B halten** → Status-2
-* im Status 2 Uhr stellen (RGB LED blau)
+* im Status *2 Uhr stellen* (RGB LED blau)
   * Register: 0-Sekunde 1-Minute 2-Stunde 3-Tag 4-Wochentag 5-Monat 6-Jahr (Variable iReg)
   * am Anfang ist 2-Stunde eingestellt
   * **A geklickt** ändert den Wert im eingestelllten Register um -1 (z.B. Stunde -1)
@@ -42,13 +42,33 @@ Um dieses Repository in MakeCode zu importieren.
   * **A halten** schaltet um auf ein anderes Register -1 (z.B. von 2-Stunde auf 1-Minute)
   * **B halten** schaltet um auf ein anderes Register +1 (z.B. von 2-Stunde auf 3-Tag)
   * **A+B geklickt** → Status-1
-    * nur wenn Register 0-Sekunde eingestellt ist, wird bei **A+B geklickt** die Sekunde auf 0 gestellt
+    * wenn Register 0-Sekunde eingestellt ist, wird die Sekunde auf 0 gestellt
   * **A+B halten**   → Status-3
-* im Status 3 Register anzeigen und Offset stellen (RGB LED gelb)
+* im Status *3 Register anzeigen und Offset stellen* (RGB LED gelb)
   * **A geklickt** ändert den Wert im Offset Register um -1
   * **B geklickt** ändert den Wert im Offset Register um +1
     * Werte von -64 bis +63 dienen zur Korrektur, wenn die Uhr falsch geht
   * **A+B geklickt** → Status-1
+
+> Der Sekundentakt kann von einer **alle 1000 ms** Schleife kommen.
+> Genauer geht es, wenn ein PIN mit CLK am RTC-Modul verdrahtet wird.
+> Das wird erkennt und schaltet die Schleife ab. Ein Symbol wird im LCD Display angezeigt.
+
+#### 3 Erweiterungen werden automatisch mit geladen
+
+* https://github.com/calliope-net/bit
+* https://github.com/calliope-net/lcd-16x2rgb
+* https://github.com/calliope-net/rtc-pcf85063tp
+
+### Programmier-Beispiele, i2c-Module, Bilder, Bezugsquellen:
+* [Calliope i2c Beispiel-Projekt mit mehreren i2c Modulen gleichzeitig](https://calliope-net.github.io/i2c-test/)
+
+### Updates
+
+> Um ein Update einer Erweiterung von GitHub zu laden, klicke in der JavaScript Ansicht
+> links unter dem Simulator auf den schwarzen Explorer. Dort steht der Name der Erweiterung
+> vor einem Mülleimer- und einem Pfeil-Symbol. Mit dem Mülleimer wird die Erweiterung gelöscht,
+> mit dem runden Pfeil nach einem Update gesucht. Danach steht dort eine Versionsnummer.
 
 #### Metadaten (verwendet für Suche, Rendering)
 

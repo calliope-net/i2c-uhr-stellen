@@ -52,7 +52,7 @@ Um dieses Repository in MakeCode zu importieren.
     * wenn Register 0-Sekunde eingestellt ist, wird die Sekunde auf 0 gestellt
   * **A+B halten**   → Status-3
 * im Status *3 Register anzeigen und Offset stellen* (RGB LED gelb)
-  * zeigt den Inhalt aller 4 Control-Register an, nur Register Offset kann geändert werden
+  * zeigt den Inhalt aller 4 Control-Register an, nur Offset kann geändert werden
   * **A geklickt** ändert den Wert im Offset Register um -1
   * **B geklickt** ändert den Wert im Offset Register um +1
     * Werte von -64 bis +63 dienen zur Korrektur, wenn die Uhr falsch geht

@@ -53,7 +53,7 @@ Um dieses Repository in MakeCode zu importieren.
 
 > Der Sekundentakt kann von einer **alle 1000 ms** Schleife kommen.
 > Genauer geht es, wenn ein PIN mit CLK am RTC-Modul verdrahtet wird.
-> Das wird erkennt und schaltet die Schleife ab. Ein Symbol wird im LCD Display angezeigt.
+> Das wird erkennt und schaltet die Schleife ab (Variable bCLK). Ein Symbol wird im LCD Display angezeigt.
 
 ### 3 Erweiterungen werden automatisch mit geladen
 

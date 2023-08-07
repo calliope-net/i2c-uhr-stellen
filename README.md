@@ -1,10 +1,16 @@
 
 > Diese Seite bei [https://calliope-net.github.io/i2c-uhr-stellen/](https://calliope-net.github.io/i2c-uhr-stellen/) öffnen
 
-### i2c Module
+### i2c Module an Calliope anstecken
 
 * [Grove - 16x2 LCD](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/)
 * [Grove - High Precision RTC (Real Time Clock)](https://wiki.seeedstudio.com/Grove_High_Precision_RTC/)
+
+Alle i2c Module werden parallel am linken Grove Steckverbinder A0 angeschlossen. 
+Dazu kann ein [i2c-Hub](https://wiki.seeedstudio.com/Grove-I2C-Hub-6Port/) benutzt werden.
+
+Für die Stromversorgung sollte Calliope über USB Kabel (an Computer oder Powerbank) angeschlossen sein.
+
 <!--
 ![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/main.jpg)
 ![](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/img/Grove-High_Precision_RTC.jpg)
@@ -20,7 +26,7 @@ Um dieses Repository in MakeCode zu importieren.
 * **https://github.com/calliope-net/i2c-uhr-stellen**
 * füge sie auf der MakeCode Webseite ein und klicke auf **Los geht's!**
 
-### Bedienung Projekt → i2c-uhr-stellen ←
+### Bedienung Calliope: Uhr stellen
 
 > Nur wenn ein LCD Modul mit RGB Hintergrundbeleuchtung angeschlossen ist, wird diese mit **A+B geklickt** an geschaltet.
 
@@ -46,6 +52,7 @@ Um dieses Repository in MakeCode zu importieren.
     * wenn Register 0-Sekunde eingestellt ist, wird die Sekunde auf 0 gestellt
   * **A+B halten**   → Status-3
 * im Status *3 Register anzeigen und Offset stellen* (RGB LED gelb)
+  * zeigt den Inhalt aller 4 Control-Register an, nur Register Offset kann geändert werden
   * **A geklickt** ändert den Wert im Offset Register um -1
   * **B geklickt** ändert den Wert im Offset Register um +1
     * Werte von -64 bis +63 dienen zur Korrektur, wenn die Uhr falsch geht

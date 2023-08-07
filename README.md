@@ -1,24 +1,27 @@
 
 > Diese Seite bei [https://calliope-net.github.io/i2c-uhr-stellen/](https://calliope-net.github.io/i2c-uhr-stellen/) öffnen
 
-## Als Erweiterung verwenden
+### i2c Module
 
-Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
+* [Grove - 16x2 LCD](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/)
+* [Grove - High Precision RTC (Real Time Clock)](https://wiki.seeedstudio.com/Grove_High_Precision_RTC/)
 
-* öffne [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* klicke auf **Neues Projekt**
-* klicke auf **Erweiterungen** unter dem Zahnrad-Menü
-* nach **https://github.com/calliope-net/i2c-uhr-stellen** suchen und importieren
+![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/img/Grove-High_Precision_RTC.jpg)
 
-## Dieses Projekt bearbeiten
+### Dieses Projekt importieren, mit Calliope testen, bearbeiten
 
-Um dieses Repository in MakeCode zu bearbeiten.
+Um dieses Repository in MakeCode zu importieren.
 
-* öffne [https://makecode.microbit.org/](https://makecode.microbit.org/)
+* öffne [https://makecode.calliope.cc](https://makecode.calliope.cc)
 * klicke auf **Importieren** und dann auf **Importiere URL**
-* füge **https://github.com/calliope-net/i2c-uhr-stellen** ein und klicke auf Importieren
+* kopiere die folgende **URL des Projekts** in die Zwischenablage (Strg-C)
+* **https://github.com/calliope-net/i2c-uhr-stellen**
+* füge sie auf der Webseite ein (Strg-V) und klicke auf **Los geht's!**
+
+
 
 #### Metadaten (verwendet für Suche, Rendering)
 
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+* Calliope mini
+* i2c

@@ -20,7 +20,7 @@ Um dieses Repository in MakeCode zu importieren.
 * **https://github.com/calliope-net/i2c-uhr-stellen**
 * füge sie auf der MakeCode Webseite ein und klicke auf **Los geht's!**
 
-### Bedienung Projekt →i2c-uhr-stellen←
+### Bedienung Projekt → i2c-uhr-stellen ←
 
 > Nur wenn ein LCD Modul mit RGB Hintergrundbeleuchtung angeschlossen ist, wird diese mit **A+B geklickt** an geschaltet.
 
@@ -38,8 +38,8 @@ Um dieses Repository in MakeCode zu importieren.
 * im Status *2 Uhr stellen* (RGB LED blau)
   * Register: 0-Sekunde 1-Minute 2-Stunde 3-Tag 4-Wochentag 5-Monat 6-Jahr (Variable iReg)
   * am Anfang ist 2-Stunde eingestellt
-  * **A geklickt** ändert den Wert im eingestelllten Register um -1 (z.B. Stunde -1)
-  * **B geklickt** ändert den Wert im eingestelllten Register um +1 (z.B. Stunde +1)
+  * **A geklickt** ändert den Wert im eingestellten Register um -1 (z.B. Stunde -1)
+  * **B geklickt** ändert den Wert im eingestellten Register um +1 (z.B. Stunde +1)
   * **A halten** schaltet um auf ein anderes Register -1 (z.B. von 2-Stunde auf 1-Minute)
   * **B halten** schaltet um auf ein anderes Register +1 (z.B. von 2-Stunde auf 3-Tag)
   * **A+B geklickt** → Status-1

@@ -20,7 +20,7 @@ Um dieses Repository in MakeCode zu importieren.
 * **https://github.com/calliope-net/i2c-uhr-stellen**
 * füge sie auf der MakeCode Webseite ein und klicke auf **Los geht's!**
 
-### Bedienung
+### Bedienung Projekt →i2c-uhr-stellen←
 
 > Nur wenn ein LCD Modul mit RGB Hintergrundbeleuchtung angeschlossen ist, wird diese mit **A+B geklickt** an geschaltet.
 
@@ -28,7 +28,7 @@ Um dieses Repository in MakeCode zu importieren.
   * *1 Anzeige Datum und Zeit* (RGB LED aus)
   * *2 Uhr stellen* (RGB LED blau)
   * *3 Register anzeigen und Offset stellen* (RGB LED gelb)
-* die Umschaltung 1→2 2→3 erfolgt mit **A+B halten**, zurück zu →1 mit **A+B geklickt**
+* die Umschaltung 1→2, 2→3 erfolgt mit **A+B halten**, zurück zu →1 mit **A+B geklickt**
 * im Status *1 Anzeige Datum und Zeit*
   * **A geklickt** zeigt auf der 25 LED Matrix binär das Datum an (Variable i25LED = 1)
   * **B geklickt** zeigt auf der 25 LED Matrix binär die Zeit an (Variable i25LED = 2)
@@ -55,14 +55,11 @@ Um dieses Repository in MakeCode zu importieren.
 > Genauer geht es, wenn ein PIN mit CLK am RTC-Modul verdrahtet wird.
 > Das wird erkennt und schaltet die Schleife ab. Ein Symbol wird im LCD Display angezeigt.
 
-#### 3 Erweiterungen werden automatisch mit geladen
+### 3 Erweiterungen werden automatisch mit geladen
 
 * https://github.com/calliope-net/bit
 * https://github.com/calliope-net/lcd-16x2rgb
 * https://github.com/calliope-net/rtc-pcf85063tp
-
-### Programmier-Beispiele, i2c-Module, Bilder, Bezugsquellen:
-* [Calliope i2c Beispiel-Projekt mit mehreren i2c Modulen gleichzeitig](https://calliope-net.github.io/i2c-test/)
 
 ### Updates
 
@@ -70,6 +67,11 @@ Um dieses Repository in MakeCode zu importieren.
 > links unter dem Simulator auf den schwarzen Explorer. Dort steht der Name der Erweiterung
 > vor einem Mülleimer- und einem Pfeil-Symbol. Mit dem Mülleimer wird die Erweiterung gelöscht,
 > mit dem runden Pfeil nach einem Update gesucht. Danach steht dort eine Versionsnummer.
+
+### Programmier-Beispiele, i2c-Module, Bilder, Bezugsquellen:
+* [Calliope i2c Demo-Projekt mit vier i2c Modulen gleichzeitig, mit DIP-Schalter.](https://calliope-net.github.io/i2c-test/)
+* [Quarz-Uhr anzeigen, stellen mit Knopf A/B, Korrektur-Register, Binär-Uhr.](https://calliope-net.github.io/i2c-uhr-stellen/)
+* [Dateien der Speicherkarte anzeigen, lesen, schreiben, löschen, mit Knopf A/B.](https://calliope-net.github.io/i2c-speicherkarte-verwalten/)
 
 #### Metadaten (verwendet für Suche, Rendering)
 

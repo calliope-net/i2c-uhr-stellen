@@ -23,7 +23,7 @@ Um dieses Repository in MakeCode zu importieren.
 * öffne [https://makecode.calliope.cc](https://makecode.calliope.cc)
 * klicke auf **Importieren** und dann auf **Importiere URL**
 * kopiere die folgende **URL des Projekts** in die Zwischenablage
-* **https://github.com/calliope-net/i2c-uhr-stellen**
+* **calliope-net/i2c-uhr-stellen**
 * füge sie auf der MakeCode Webseite ein und klicke auf **Los geht's!**
 
 ### Bedienung Calliope: Uhr stellen

@@ -1,6 +1,8 @@
 
 > Diese Seite bei [https://calliope-net.github.io/i2c-uhr-stellen/](https://calliope-net.github.io/i2c-uhr-stellen/) öffnen
 
+![](uhr-stellen-460.jpg)
+
 ### i2c Module an Calliope anstecken
 
 * [Grove - 16x2 LCD](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/)

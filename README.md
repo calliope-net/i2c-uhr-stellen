@@ -64,7 +64,9 @@ Um dieses Repository in MakeCode zu importieren.
 > Genauer geht es, wenn ein PIN mit CLK am RTC-Modul verdrahtet wird.
 > Das wird erkennt und schaltet die Schleife ab (Variable bCLK). Ein Symbol wird im LCD Display angezeigt.
 
-### 3 Erweiterungen werden automatisch mit geladen
+### Erweiterungen
+
+alle Erweiterungen (Software) werden automatisch von GitHub geladen
 
 * [https://github.com/calliope-net/bit](https://calliope-net.github.io/bit/)
 * [https://github.com/calliope-net/lcd-16x2rgb](https://calliope-net.github.io/lcd-16x2rgb/)

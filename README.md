@@ -77,7 +77,7 @@ Um dieses Repository in MakeCode zu importieren.
 > vor einem Mülleimer- und einem Pfeil-Symbol. Mit dem Mülleimer wird die Erweiterung gelöscht,
 > mit dem runden Pfeil nach einem Update gesucht. Danach steht dort eine Versionsnummer.
 
-### Programmier-Beispiele, i2c-Module, Bilder, [Bezugsquellen](./calliope-net/i2c-test#bezugsquellen):
+### Programmier-Beispiele, i2c-Module, Bilder, [Bezugsquellen](/calliope-net/i2c-test#bezugsquellen):
 * [Calliope-App mit vier i2c Modulen gleichzeitig, DIP-Schalter, Speicherkarte, LCD, Uhr.](https://calliope-net.github.io/i2c-test/)
 * [Calliope-App Quarz-Uhr anzeigen, stellen mit Knopf A/B, Korrektur-Register, Binär-Uhr.](https://calliope-net.github.io/i2c-uhr-stellen/)
 * [Calliope-App Dateien der Speicherkarte anzeigen, lesen, schreiben, löschen, mit Knopf A/B.](https://calliope-net.github.io/i2c-speicherkarte-verwalten/)

@@ -13,12 +13,12 @@ Dazu kann ein [i2c-Hub](https://wiki.seeedstudio.com/Grove-I2C-Hub-6Port/) benut
 
 Für die Stromversorgung sollte Calliope über USB Kabel (an Computer oder Powerbank) angeschlossen sein.
 
-<!--
-![](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/main.jpg)
-![](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/img/Grove-High_Precision_RTC.jpg)
--->
+### .hex-Datei direkt auf Calliope laden, oder in MakeCode importieren.
 
-### Dieses Projekt importieren, mit Calliope testen, bearbeiten.
+* [mini-i2c-uhr-stellen.hex](mini-i2c-uhr-stellen.hex)
+* [Schnappschuss (Bildschirmfoto mit den Blöcken)](mini-i2c-uhr-stellen.png)
+
+### Dieses Projekt von GitHub importieren, bearbeiten, mit Calliope testen.
 
 Um dieses Repository in MakeCode zu importieren.
 
@@ -28,7 +28,7 @@ Um dieses Repository in MakeCode zu importieren.
 * **calliope-net/i2c-uhr-stellen**
 * füge sie auf der MakeCode Webseite ein und klicke auf **Los geht's!**
 
-### Bedienung Calliope: Uhr stellen
+### Bedienung der 'Calliope-App': Uhr stellen
 
 > Nur wenn ein LCD Modul mit RGB Hintergrundbeleuchtung angeschlossen ist, wird diese mit **A+B geklickt** an geschaltet.
 

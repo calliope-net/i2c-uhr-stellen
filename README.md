@@ -83,7 +83,7 @@ Um dieses Repository in MakeCode zu importieren.
 * [Calliope-App Quarz-Uhr anzeigen, stellen mit Knopf A/B, Korrektur-Register, Binär-Uhr.](https://calliope-net.github.io/i2c-uhr-stellen/)
 * [Calliope-App Dateien der Speicherkarte anzeigen, lesen, schreiben, löschen, mit Knopf A/B.](https://calliope-net.github.io/i2c-speicherkarte-verwalten/)
 
-### Los geht's
+### Material
 
 * [i2c-Erweiterungen für MakeCode (Software)](https://calliope-net.github.io/i2c-test)
 * [i2c-Module und Bezugsquellen (Hardware)](https://calliope-net.github.io/i2c-test#bezugsquellen)

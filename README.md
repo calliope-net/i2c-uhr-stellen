@@ -1,5 +1,5 @@
 
-Diese Seite bei [https://calliope-net.github.io/i2c-uhr-stellen/](https://calliope-net.github.io/i2c-uhr-stellen/) öffnen
+Diese Seite bei [https://calliope-net.github.io/i2c-uhr-stellen/](https://calliope-net.github.io/i2c-uhr-stellen/) öffnen.
 
 ![](uhr-stellen-460.jpg)
 

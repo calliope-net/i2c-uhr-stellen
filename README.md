@@ -1,24 +1,24 @@
 
-> Diese Seite bei [https://calliope-net.github.io/i2c-uhr-stellen/](https://calliope-net.github.io/i2c-uhr-stellen/) öffnen
+Diese Seite bei [https://calliope-net.github.io/i2c-uhr-stellen/](https://calliope-net.github.io/i2c-uhr-stellen/) öffnen
 
 ![](uhr-stellen-460.jpg)
 
-### i2c Module an Calliope anstecken
+### i2c Module an Calliope anstecken.
 
-* [Grove - 16x2 LCD](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/)
 * [Grove - High Precision RTC (Real Time Clock)](https://wiki.seeedstudio.com/Grove_High_Precision_RTC/)
+* [Grove - 16x2 LCD](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/)
 
 Alle i2c Module werden parallel am linken Grove Steckverbinder A0 angeschlossen. 
 Dazu kann ein [i2c-Hub](https://wiki.seeedstudio.com/Grove-I2C-Hub-6Port/) benutzt werden.
 
 Für die Stromversorgung sollte Calliope über USB Kabel (an Computer oder Powerbank) angeschlossen sein.
 
-### .hex-Datei direkt auf Calliope laden, oder in MakeCode importieren.
+#### .hex-Datei direkt auf Calliope laden, oder in MakeCode importieren.
 
 * [mini-i2c-uhr-stellen.hex](mini-i2c-uhr-stellen.hex)
 * [Schnappschuss (Bildschirmfoto mit den Blöcken)](mini-i2c-uhr-stellen.png)
 
-### Dieses Projekt von GitHub importieren, bearbeiten, mit Calliope testen.
+#### Dieses Projekt von GitHub importieren, bearbeiten, mit Calliope testen.
 
 Um dieses Repository in MakeCode zu importieren.
 
@@ -28,9 +28,9 @@ Um dieses Repository in MakeCode zu importieren.
 * **calliope-net/i2c-uhr-stellen**
 * füge sie auf der MakeCode Webseite ein (Strg-V) und klicke auf **Los geht's!**
 
-### Bedienung der 'Calliope-App': Uhr stellen
+### Bedienung der Calliope-App 'Uhr stellen'
 
-> Nur wenn ein LCD Modul mit RGB Hintergrundbeleuchtung angeschlossen ist, wird diese mit **A+B geklickt** an geschaltet.
+Nur wenn ein LCD Modul mit RGB Hintergrundbeleuchtung angeschlossen ist, wird diese mit **A+B geklickt** an geschaltet.
 
 * das Programm hat 3 Zustände (Variable iStatus):
   * *1 Anzeige Datum und Zeit* (RGB LED aus)
@@ -60,35 +60,31 @@ Um dieses Repository in MakeCode zu importieren.
     * Werte von -64 bis +63 dienen zur Korrektur, wenn die Uhr falsch geht
   * **A+B geklickt** → Status-1
 
-> Der Sekundentakt kann von einer **alle 1000 ms** Schleife kommen.
-> Genauer geht es, wenn ein PIN mit CLK am RTC-Modul verdrahtet wird.
-> Das wird erkennt und schaltet die Schleife ab (Variable bCLK). Ein Symbol wird im LCD Display angezeigt.
+Der Sekundentakt kann von einer **alle 1000 ms** Schleife kommen.
+Genauer geht es, wenn ein PIN mit CLK am RTC-Modul verdrahtet wird.
+Das wird erkennt und schaltet die Schleife ab (Variable bCLK). Ein Symbol wird im LCD Display angezeigt.
 
 ### Erweiterungen
 
-alle Erweiterungen (Software) werden automatisch von GitHub geladen
+Die Calliope-App 'Uhr stellen' lädt folgende Erweiterungen:
 
 * [https://github.com/calliope-net/bit](https://calliope-net.github.io/bit/)
-* [https://github.com/calliope-net/lcd-16x2rgb](https://calliope-net.github.io/lcd-16x2rgb/)
 * [https://github.com/calliope-net/rtc-pcf85063tp](https://calliope-net.github.io/rtc-pcf85063tp/)
+* [https://github.com/calliope-net/lcd-16x2rgb](https://calliope-net.github.io/lcd-16x2rgb/)
 
-### Updates
+> [Alle i2c-Erweiterungen für MakeCode von calliope-net (Software).](https://calliope-net.github.io/i2c-test#erweiterungen)
 
-> Um ein Update einer Erweiterung von GitHub zu laden, klicke in der JavaScript Ansicht
-> links unter dem Simulator auf den schwarzen Explorer. Dort steht der Name der Erweiterung
-> vor einem Mülleimer- und einem Pfeil-Symbol. Mit dem Mülleimer wird die Erweiterung gelöscht,
-> mit dem runden Pfeil nach einem Update gesucht. Danach steht dort eine Versionsnummer.
+> [Upates für Erweiterungen; Erweiterungen aus einem Projekt löschen.](https://calliope-net.github.io/i2c-test#updates)
 
-### Calliope-Apps, .hex-Dateien, Bildschirmfotos mit Blöcken
+#### Calliope-Apps, .hex-Dateien, Bildschirmfotos mit Blöcken
 
-* [Calliope-App mit vier i2c Modulen gleichzeitig, DIP-Schalter, Speicherkarte, LCD-Display, Uhr.](https://calliope-net.github.io/i2c-test/)
-* [Calliope-App Quarz-Uhr anzeigen, stellen mit Knopf A/B, Korrektur-Register, Binär-Uhr.](https://calliope-net.github.io/i2c-uhr-stellen/)
-* [Calliope-App Dateien der Speicherkarte anzeigen, lesen, schreiben, löschen, mit Knopf A/B.](https://calliope-net.github.io/i2c-speicherkarte-verwalten/)
+> [Alle Beispiel-Projekte für MakeCode von calliope-net.](https://calliope-net.github.io/i2c-test#programmierbeispiele)
 
-### Material
+> GitHub-Profil calliope-net: [https://github.com/calliope-net](https://github.com/calliope-net)
 
-* [i2c-Erweiterungen für MakeCode (Software)](https://calliope-net.github.io/i2c-test#erweiterungen)
-* [i2c-Module und Bezugsquellen (Hardware)](https://calliope-net.github.io/i2c-test#bezugsquellen)
+### Bezugsquellen
+
+> [i2c-Module und Bezugsquellen (Hardware).](https://calliope-net.github.io/i2c-test#bezugsquellen)
 
 #### Metadaten (verwendet für Suche, Rendering)
 

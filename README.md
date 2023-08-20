@@ -10,7 +10,6 @@ Diese Seite bei [https://calliope-net.github.io/i2c-uhr-stellen/](https://callio
 
 Alle i2c Module werden parallel am linken Grove Steckverbinder A0 angeschlossen. 
 Dazu kann ein [i2c-Hub](https://wiki.seeedstudio.com/Grove-I2C-Hub-6Port/) benutzt werden.
-
 Für die Stromversorgung sollte Calliope über USB Kabel (an Computer oder Powerbank) angeschlossen sein.
 
 #### .hex-Datei direkt auf Calliope laden, oder in MakeCode importieren.

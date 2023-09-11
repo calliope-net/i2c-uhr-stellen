@@ -8,8 +8,8 @@ Diese Seite bei [https://calliope-net.github.io/i2c-uhr-stellen/](https://callio
 * [Grove - High Precision RTC (Real Time Clock)](https://wiki.seeedstudio.com/Grove_High_Precision_RTC/)
 * [Grove - 16x2 LCD](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/)
 
-Alle i2c Module werden parallel am linken Grove Steckverbinder A0 angeschlossen. 
-Dazu kann ein [i2c-Hub](https://wiki.seeedstudio.com/Grove-I2C-Hub-6Port/) benutzt werden.
+Alle i2c Module werden parallel am linken Grove Steckverbinder A0 angeschlossen. Dazu kann ein i2c-Hub benutzt werden.
+
 Für die Stromversorgung sollte Calliope über USB Kabel (an Computer oder Powerbank) angeschlossen sein.
 
 #### .hex-Datei direkt auf Calliope laden, oder in MakeCode importieren.
@@ -27,7 +27,7 @@ Um dieses Repository in MakeCode zu importieren.
 * **calliope-net/i2c-uhr-stellen**
 * füge sie auf der MakeCode Webseite ein (Strg-V) und klicke auf **Los geht's!**
 
-### Bedienung der Calliope-App 'Uhr stellen'
+### Bedienung der Calliope-App 'Uhr stellen'.
 
 Nur wenn ein LCD Modul mit RGB Hintergrundbeleuchtung angeschlossen ist, wird diese mit **A+B geklickt** an geschaltet.
 

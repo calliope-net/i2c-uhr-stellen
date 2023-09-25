@@ -23,7 +23,7 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
 })
 function zeigeZeit () {
     if (bCLK) {
-        lcd16x2rgb.writeText(lcd16x2rgb.eADDR_LCD.LCD_16x2, 0, 15, 15, lcd16x2rgb.eAlign.left, String.fromCharCode(bit.hex(bit.H4.xE0, bit.H0.x9)))
+        lcd16x2rgb.writeText(lcd16x2rgb.eADDR_LCD.LCD_16x2, 0, 15, 15, lcd16x2rgb.eAlign.left, String.fromCharCode(233))
     }
     lcd16x2rgb.writeText(lcd16x2rgb.eADDR_LCD.LCD_16x2, 0, 0, 12, lcd16x2rgb.eAlign.left, rtcpcf85063tp.getDate(rtcpcf85063tp.ePart.mit, rtcpcf85063tp.ePart.mit))
     lcd16x2rgb.writeText(lcd16x2rgb.eADDR_LCD.LCD_16x2, 1, 3, 11, lcd16x2rgb.eAlign.left, rtcpcf85063tp.getTime(rtcpcf85063tp.ePart.mit))
@@ -93,7 +93,7 @@ function initRGB () {
         basic.setLedColor(0x00ff00)
     }
 }
-input.onButtonEvent(Button.A, input.buttonEventValue(ButtonEvent.Hold), function () {
+input.onButtonEvent(Button.A, ButtonEvent.Hold, function () {
     if (!(input.buttonIsPressed(Button.B))) {
         if (iStatus == 2 && iReg > 0) {
             iReg += -1
@@ -101,7 +101,7 @@ input.onButtonEvent(Button.A, input.buttonEventValue(ButtonEvent.Hold), function
         }
     }
 })
-input.onButtonEvent(Button.B, input.buttonEventValue(ButtonEvent.Hold), function () {
+input.onButtonEvent(Button.B, ButtonEvent.Hold, function () {
     if (!(input.buttonIsPressed(Button.A))) {
         if (iStatus == 2 && iReg < 6) {
             iReg += 1
@@ -109,7 +109,7 @@ input.onButtonEvent(Button.B, input.buttonEventValue(ButtonEvent.Hold), function
         }
     }
 })
-input.onButtonEvent(Button.AB, input.buttonEventValue(ButtonEvent.Hold), function () {
+input.onButtonEvent(Button.AB, ButtonEvent.Hold, function () {
     if (iStatus == 1) {
         rtcpcf85063tp.initRegister(rtcpcf85063tp.eADDR.RTC_PCF85063TP)
         lcd16x2rgb.screenClear(lcd16x2rgb.eADDR_LCD.LCD_16x2)

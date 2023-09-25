@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "dependencies": {
         "core": "*",
-        "rtc-pcf85063tp": "github:calliope-net/rtc-pcf85063tp#v1.0.1",
-        "lcd-16x2rgb": "github:calliope-net/lcd-16x2rgb#v1.0.0",
+        "rtc-pcf85063tp": "github:calliope-net/rtc-pcf85063tp#v1.0.2",
+        "lcd-16x2rgb": "github:calliope-net/lcd-16x2rgb#v1.0.2",
         "bit": "github:calliope-net/bit#v1.0.6"
     },
     "files": [

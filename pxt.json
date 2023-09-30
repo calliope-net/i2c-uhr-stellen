@@ -3,9 +3,9 @@
     "version": "1.0.1",
     "dependencies": {
         "core": "*",
-        "rtc-pcf85063tp": "github:calliope-net/rtc-pcf85063tp#v1.0.2",
-        "lcd-16x2rgb": "github:calliope-net/lcd-16x2rgb#v1.0.2",
-        "bit": "github:calliope-net/bit#v1.0.6"
+        "bit": "github:calliope-net/bit#v1.0.6",
+        "rtc-uhr": "github:calliope-net/rtc-uhr",
+        "lcd-16x2": "github:calliope-net/lcd-16x2"
     },
     "files": [
         "main.blocks",

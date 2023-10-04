@@ -5,11 +5,14 @@ function zeigeZeitRegister () {
 }
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     if (iStatus == 2) {
+        rtcpcf85063tp.addDateTime(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51), iReg, -1)
+        rtcpcf85063tp.readDateTime(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51))
         zeigeZeit()
         zeigeZeitRegister()
     } else if (iStatus == 3) {
         if (iOffset > -64) {
             iOffset += -1
+            rtcpcf85063tp.writeRegister(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51), rtcpcf85063tp.eControl.Control_1, bit.bitwise(iOffset, bit.eBit.AND, 127))
             zeigeControlRegister()
         }
     } else {
@@ -29,11 +32,15 @@ function zeigeZeit () {
 input.onButtonEvent(Button.AB, input.buttonEventClick(), function () {
     if (iStatus == 2) {
         if (iReg == 0) {
-        	
+            rtcpcf85063tp.writeDateTime(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51), rtcpcf85063tp.eRegister.Sekunde, [0])
         }
+        lcd16x2rgb.clearScreen(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2))
+        lcd16x2rgb.setDisplay(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2), true, false)
         iStatus = 1
         basic.turnRgbLedOff()
     } else if (iStatus == 3) {
+        lcd16x2rgb.clearScreen(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2))
+        lcd16x2rgb.setDisplay(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2), true, false)
         iStatus = 1
         basic.turnRgbLedOff()
     } else {
@@ -42,11 +49,14 @@ input.onButtonEvent(Button.AB, input.buttonEventClick(), function () {
 })
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (iStatus == 2) {
+        rtcpcf85063tp.addDateTime(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51), iReg, 1)
+        rtcpcf85063tp.readDateTime(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51))
         zeigeZeit()
         zeigeZeitRegister()
     } else if (iStatus == 3) {
         if (iOffset < 63) {
             iOffset += 1
+            rtcpcf85063tp.writeRegister(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51), rtcpcf85063tp.eControl.Control_1, bit.bitwise(iOffset, bit.eBit.AND, 127))
             zeigeControlRegister()
         }
     } else {
@@ -119,6 +129,7 @@ lcd16x2rgb.initLCD(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2))
 iStatus = 1
 loops.everyInterval(1000, function () {
     if (!(bCLK) && iStatus == 1) {
+        rtcpcf85063tp.readDateTime(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51))
         zeigeZeit()
     }
 })

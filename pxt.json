@@ -1,6 +1,6 @@
 {
     "name": "i2c-uhr-stellen",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "dependencies": {
         "core": "*",
         "bit": "github:calliope-net/bit#v1.1.0",

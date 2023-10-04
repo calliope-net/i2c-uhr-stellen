@@ -69,6 +69,7 @@ input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
 })
 pins.onPulsed(DigitalPin.P2, PulseValue.Low, function () {
     if (bCLK && iStatus == 1) {
+        rtcpcf85063tp.readDateTime(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51))
         zeigeZeit()
     } else if (!(bCLK) && iStatus == 1) {
         bCLK = true

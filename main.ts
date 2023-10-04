@@ -1,7 +1,7 @@
 function zeigeZeitRegister () {
     lcd16x2rgb.writeText(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2), 1, 1, 1, lcd16x2rgb.lcd16x2_text(bit.formatNumber(iReg, bit.eLength.HEX_F)))
     if (bit.between(iReg, 0, 6)) {
-        lcd16x2rgb.writeText(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2), 1, 0, 0, lcd16x2rgb.lcd16x2_text("smHdwMy".charAt(0)))
+        lcd16x2rgb.writeText(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2), 1, 0, 0, lcd16x2rgb.lcd16x2_text("smHdwMy".charAt(iReg)))
         lcd16x2rgb.writeText(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2), 1, 12, 13, lcd16x2rgb.lcd16x2_text(bit.formatNumber(rtcpcf85063tp.getDateTimeArray()[iReg], bit.eLength.HEX_FF)))
     }
 }

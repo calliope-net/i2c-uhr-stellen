@@ -21,6 +21,14 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
         i25LED = 1
     }
 })
+pins.onPulsed(DigitalPin.P2, PulseValue.High, function () {
+    if (bCLK && iStatus == 1) {
+        rtcpcf85063tp.readDateTime(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51))
+        zeigeZeit()
+    } else if (!(bCLK) && iStatus == 1) {
+        bCLK = true
+    }
+})
 function zeigeZeit () {
     if (bCLK) {
         lcd16x2rgb.writeText(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2), 0, 15, 15, lcd16x2rgb.lcd16x2_text(String.fromCharCode(233)))
@@ -65,14 +73,6 @@ input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
         }
     } else {
         i25LED = 2
-    }
-})
-pins.onPulsed(DigitalPin.P2, PulseValue.Low, function () {
-    if (bCLK && iStatus == 1) {
-        rtcpcf85063tp.readDateTime(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51))
-        zeigeZeit()
-    } else if (!(bCLK) && iStatus == 1) {
-        bCLK = true
     }
 })
 function zeigeControlRegister () {
@@ -136,7 +136,10 @@ i25LED = 0
 bCLK = false
 iReg = rtcpcf85063tp.rtcpcf85063tp_eRegister(rtcpcf85063tp.eRegister.Stunde)
 lcd16x2rgb.initLCD(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2))
-iStatus = 1
+rtcpcf85063tp.initRegister(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51))
+if (rtcpcf85063tp.i2cError() == 0) {
+    iStatus = 1
+}
 loops.everyInterval(1000, function () {
     if (!(bCLK) && iStatus == 1) {
         rtcpcf85063tp.readDateTime(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51))

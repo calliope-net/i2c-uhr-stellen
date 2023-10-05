@@ -36,7 +36,7 @@ function zeigeZeit () {
 input.onButtonEvent(Button.AB, input.buttonEventClick(), function () {
     if (iStatus == 2) {
         if (iReg == 0) {
-            rtcpcf85063tp.writeDateTime(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51), rtcpcf85063tp.eRegister.Sekunde, [0])
+            rtcpcf85063tp.writeDateTime(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51), rtcpcf85063tp.rtcpcf85063tp_eRegister(rtcpcf85063tp.eRegister.Sekunde), [0])
         }
         lcd16x2rgb.clearScreen(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2))
         lcd16x2rgb.setDisplay(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2), true, false)
@@ -134,7 +134,7 @@ let bCLK = false
 let i25LED = 0
 i25LED = 0
 bCLK = false
-iReg = 2
+iReg = rtcpcf85063tp.rtcpcf85063tp_eRegister(rtcpcf85063tp.eRegister.Stunde)
 lcd16x2rgb.initLCD(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2))
 iStatus = 1
 loops.everyInterval(1000, function () {

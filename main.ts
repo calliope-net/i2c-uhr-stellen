@@ -14,7 +14,7 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     } else if (iStatus == 3) {
         if (iOffset > -64) {
             iOffset += -1
-            rtcpcf85063tp.writeRegister(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51), rtcpcf85063tp.eControl.Control_1, bit.bitwise(iOffset, bit.eBit.AND, 127))
+            rtcpcf85063tp.writeRegister(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51), rtcpcf85063tp.eControl.Offset, bit.bitwise(iOffset, bit.eBit.AND, 127))
             zeigeControlRegister()
         }
     } else {
@@ -60,7 +60,7 @@ input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     } else if (iStatus == 3) {
         if (iOffset < 63) {
             iOffset += 1
-            rtcpcf85063tp.writeRegister(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51), rtcpcf85063tp.eControl.Control_1, bit.bitwise(iOffset, bit.eBit.AND, 127))
+            rtcpcf85063tp.writeRegister(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51), rtcpcf85063tp.eControl.Offset, bit.bitwise(iOffset, bit.eBit.AND, 127))
             zeigeControlRegister()
         }
     } else {

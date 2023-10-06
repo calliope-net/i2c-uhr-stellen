@@ -67,9 +67,9 @@ Das wird erkennt und schaltet die Schleife ab (Variable bCLK). Ein Symbol wird i
 
 Die Calliope-App 'Uhr stellen' lädt folgende Erweiterungen:
 
-Erweiterung für MakeCode|Blöcke zur Programmierung der Module
+Erweiterung für MakeCode|Blöcke zur Programmierung der i2c-Module
 ---|---
-[calliope-net/bit](https://calliope-net.github.io/bit/) | Blöcke zur Formatierung von Text und Zahlen (HEX), Logik (bitweise)
+[calliope-net/bit](https://calliope-net.github.io/bit/) | Blöcke für HEX-Zahlen, bitweise Logik
 [calliope-net/rtc-uhr](https://calliope-net.github.io/rtc-uhr/) | Quarz-Uhr mit Knopfzelle
 [calliope-net/lcd-16x2](https://calliope-net.github.io/lcd-16x2/) | LCD-Display 16 Zeichen x 2 Zeilen
 

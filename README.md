@@ -68,8 +68,8 @@ Das wird erkennt und schaltet die Schleife ab (Variable bCLK). Ein Symbol wird i
 Die Calliope-App 'Uhr stellen' lädt folgende Erweiterungen:
 
 * [https://github.com/calliope-net/bit](https://calliope-net.github.io/bit/)
-* [https://github.com/calliope-net/rtc-pcf85063tp](https://calliope-net.github.io/rtc-pcf85063tp/)
-* [https://github.com/calliope-net/lcd-16x2rgb](https://calliope-net.github.io/lcd-16x2rgb/)
+* [https://github.com/calliope-net/rtc-uhr](https://calliope-net.github.io/rtc-uhr/)
+* [https://github.com/calliope-net/lcd-16x2](https://calliope-net.github.io/lcd-16x2/)
 
 > [Upates für Erweiterungen; Erweiterungen aus einem Projekt löschen.](https://calliope-net.github.io/i2c-liste#updates)
 

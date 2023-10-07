@@ -4,8 +4,8 @@
     "dependencies": {
         "core": "*",
         "bit": "github:calliope-net/bit#v1.1.0",
-        "rtc-uhr": "github:calliope-net/rtc-uhr#v2.0.2",
-        "lcd-16x2": "github:calliope-net/lcd-16x2#v2.0.1"
+        "rtc-uhr": "github:calliope-net/rtc-uhr#v2.1.1",
+        "lcd-16x2": "github:calliope-net/lcd-16x2#v2.0.4"
     },
     "files": [
         "main.blocks",

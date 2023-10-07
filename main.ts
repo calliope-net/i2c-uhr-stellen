@@ -136,9 +136,11 @@ i25LED = 0
 bCLK = false
 iReg = rtcpcf85063tp.rtcpcf85063tp_eRegister(rtcpcf85063tp.eRegister.Stunde)
 lcd16x2rgb.initLCD(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2))
-rtcpcf85063tp.initRegister(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51))
+rtcpcf85063tp.beimStart(rtcpcf85063tp.rtcpcf85063tp_eADDR(rtcpcf85063tp.eADDR.RTC_x51), true)
 if (rtcpcf85063tp.i2cError() == 0) {
     iStatus = 1
+} else {
+    lcd16x2rgb.writeText(lcd16x2rgb.lcd16x2_eADDR(lcd16x2rgb.eADDR_LCD.LCD_16x2), 0, 0, 15, rtcpcf85063tp.i2cError())
 }
 loops.everyInterval(1000, function () {
     if (!(bCLK) && iStatus == 1) {
